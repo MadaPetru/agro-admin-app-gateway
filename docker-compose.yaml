@@ -1,0 +1,15 @@
+version: '3.9'
+
+services:
+  app:
+    image: 'agro-admin-gateway'
+    build:
+      context: .
+    container_name: agro-admin-gateway
+    ports:
+      - "8081:8081"
+    networks:
+      - agro-admin-network
+
+networks:
+  agro-admin-network:

@@ -1,0 +1,10 @@
+spring:
+  cloud:
+    gateway:
+      routes:
+        - id: agro-admin-be
+          uri: http://host.docker.internal:8080
+          predicates:
+            - Path=/**
+server:
+  port: 8081
