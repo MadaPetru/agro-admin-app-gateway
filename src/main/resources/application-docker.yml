@@ -6,3 +6,6 @@ spring:
           uri: http://host.docker.internal:8080
           predicates:
             - Path=/**
+          metadata:
+            connect-timeout: 100000
+            response-timeout: 100000
