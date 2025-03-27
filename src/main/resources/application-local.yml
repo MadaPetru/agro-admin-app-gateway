@@ -1,10 +1,22 @@
 spring:
   cloud:
     gateway:
+      globalcors:
+        corsConfigurations:
+          '[/**]':
+            allowedOrigins: "http://localhost:4200"
+            allowedMethods:
+              - GET
+              - POST
+              - DELETE
+              - PATCH
+              - PUT
+              - OPTIONS
+            allowedHeaders: "*"
+            allowCredentials: true
+        add-to-simple-url-handler-mapping: true
       routes:
         - id: agro-admin-be
           uri: http://localhost:8080
           predicates:
             - Path=/**
-server:
-  port: 8081

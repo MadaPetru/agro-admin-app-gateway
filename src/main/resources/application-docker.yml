@@ -6,5 +6,3 @@ spring:
           uri: http://host.docker.internal:8080
           predicates:
             - Path=/**
-server:
-  port: 8081
